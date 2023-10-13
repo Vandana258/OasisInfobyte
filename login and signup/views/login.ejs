@@ -1,0 +1,78 @@
+<!-- <--<% if (typeof name !== 'undefined') { %>
+    <p>Welcome, <%= name %>!</p>
+  <% } %>!-->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+       }
+       body{
+        display: flex;
+        background: url('../assets/images/yyy_1.jpg') no-repeat;
+        background-size: cover;
+    background-position: center;
+    /*filter:blur(10px);*/
+    width:100%;
+    height: 100vh;
+       }
+       .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 500px;
+        border-radius: 10px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start; /* Center horizontally */
+        align-items: flex-start; /* Center vertically */
+        overflow: hidden; /* Hide the blur effect overflow */
+       }
+
+       .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../assets/images/yyy_1.jpg') no-repeat;
+        filter: blur(10px); /* Apply the blur to the background image */
+        background-size: cover;
+        background-position: center;
+        z-index: -1; /* Place it behind the content */
+       }
+       .Hello h1{
+        
+    color: rgb(181, 238, 166);
+    font-size: 100px;
+    text-align: center;
+    font-weight: 600;
+    top:30%;
+    text-shadow: 10px 20px 20px rgb(2, 73, 14);
+}
+    </style>
+</head>
+<body>
+  <section class="dashboard">
+      <div class="container">
+          <div class="Hello">
+              <h1>Hello, <%= name %>!</h1>
+          </div>
+      </div>
+  </section>
+</body>
+
+</html>
+
+ 
+ 

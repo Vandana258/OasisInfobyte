@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <h1 style="color: rgb(34, 3, 3);"> <%= title %>  </h1>
+    <!--<h1 style="color: rgb(65, 211, 7);"> <%= password %>  </h1>
+    <h1 style="color: rgb(255, 0, 200);"> <%= email %>  </h1>!-->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+         <form action="#" class="search-bar">
+            <input type="text" placeholder="search...">
+            <button type="submit">.<i class='bx bx-search-alt-2'></i></button>
+         </form>
+    </header>
+
+    <div class="background"></div>
+    <div class="container">
+        <div class="logreg-box">
+            <div class="form-box login">
+                <form action="/login" method="post">
+                    <h2>Login</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bx-envelope' ></i></span>
+                        <input type="email" name="email" placeholder="." required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" name="password" placeholder="." required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Login</button>
+
+                    <div class="login-register"><p>Don't have an account? <a href="#" class="register-link">
+                       Sign up
+                    </a></p></div>
+                </form>
+            </div>
+
+            <div class="form-box register">
+                <form action="/register" method="post">
+                    <h2>Sign Up</h2>
+                      <!-- Code to display alerts -->
+                      <% if (title === 'Alert') { %>
+                        <div class="alert alert-danger">
+                            <strong>Alert:</strong> <%= email %>
+                        </div>
+                    <% } else if (title === 'Done') { %>
+                        <div class="alert alert-success">
+                            Registration successful!
+                        </div>
+                    <% } %>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <input type="text" name="name" placeholder="." required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bx-envelope' ></i></span>
+                        <input type="email" name="email"placeholder="." required>
+                        <label>Email</label>
+                    </div>
+                     <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" name="password" placeholder="." required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" name="cpassword" placeholder="." required>
+                        <label> Confirm Password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">I agree to the terms and conditions</label>
+                
+                    </div>
+
+                    <button type="submit" class="btn">Sign Up</button>
+
+                    <div class="login-register"><p>Already have an account? <a href="#" class="login-link">
+                       Login
+                    </a></p></div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
